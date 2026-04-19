@@ -1,0 +1,91 @@
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 16px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+h1 {
+  text-align: center;
+}
+
+.presentacion {
+  padding: 56px 20px;
+  text-align: center;
+  border-radius: 12px;
+  background-color: var(--tierra-beige);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.presentacion p {
+  max-width: 70ch;
+  margin: 0;
+}
+
+.seccion {
+  position: relative;
+  padding: 80px 40px;
+  border-radius: 8px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.seccion::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(107, 78, 61, 0.7),
+    rgba(107, 78, 61, 0.5)
+  );
+  z-index: 1;
+}
+
+.seccion h4,
+.seccion p,
+.seccion button {
+  position: relative;
+  z-index: 2;
+}
+
+.seccion h4 {
+  color: var(--tierra-crema);
+  font-size: 2.5em;
+  margin: 0 0 10px 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.seccion p {
+  color: white;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.Sillones {
+  background-image: url("../assets/img/Sillon Valentina.webp");
+}
+
+.Mesas {
+  background-image: url("../assets/img/Mesa Arrel.webp");
+}
+
+.Escritorios {
+  background-image: url("../assets/img/Escritorio Aura.webp");
+}
+
+.Sillas {
+  background-image: url("../assets/img/Silla Glia.webp");
+}

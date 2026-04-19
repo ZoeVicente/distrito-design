@@ -1,0 +1,252 @@
+.carrito-vacio {
+  text-align: center;
+  padding: 40px;
+  color: var(--tierra-claro);
+}
+
+.carrito-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 16px 48px;
+  display: flex;
+  justify-content: center;
+}
+
+.carrito-contenido {
+  background-color: var(--tierra-beige);
+  padding: 24px;
+  border-radius: 8px;
+  width: min(720px, 100%);
+  margin: 0;
+  text-align: center;
+}
+
+.lista-carrito {
+  list-style: none;
+  padding: 0;
+  margin: 18px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.carrito-item {
+  background-color: var(--tierra-crema);
+  padding: 15px;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 14px;
+  text-align: left;
+  min-height: 96px;
+}
+
+.carrito-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.carrito-item-nombre {
+  margin: 0;
+  font-weight: bold;
+  line-height: 1.2;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.carrito-item-precio {
+  margin: 0;
+}
+
+.carrito-item button { white-space: nowrap; }
+
+.total-carrito {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 16px 0;
+  text-align: center;
+}
+
+.btn-vaciar {
+  background-color: var(--tierra-oscuro);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.carrito-acciones {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.checkout-step {
+  text-align: center;
+}
+
+.checkout-progress {
+  display: flex;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin: 10px 0 18px;
+}
+
+.checkout-progress span {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: rgba(107, 78, 61, 0.15);
+  font-size: 0.85rem;
+}
+
+.checkout-progress span.activo {
+  background: var(--tierra-oscuro);
+  color: var(--tierra-crema);
+}
+
+.checkout-form {
+  display: grid;
+  gap: 10px;
+  max-width: 440px;
+  margin: 16px auto;
+}
+
+.checkout-form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--tierra-claro);
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-family: inherit;
+}
+
+.checkout-payment {
+  display: grid;
+  gap: 10px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.checkout-payment label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--tierra-crema);
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.payment-info-box {
+  background: var(--tierra-crema);
+  border-radius: 8px;
+  padding: 12px;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.payment-info-box p {
+  margin: 6px 0;
+}
+
+.payment-info-box a {
+  text-decoration: underline;
+}
+
+.checkout-error {
+  color: #8a1f1f;
+  margin-top: 12px;
+  font-weight: bold;
+}
+
+.checkout-success p {
+  margin-bottom: 20px;
+}
+
+.cart-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 200;
+  padding: 24px 12px;
+  overflow-y: auto;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.cart-modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.cart-modal {
+  position: relative;
+  width: min(760px, 100%);
+  margin-top: 20px;
+  transform: translateY(-14px);
+  transition: transform 0.2s ease;
+}
+
+.cart-modal.open {
+  transform: translateY(0);
+}
+
+.cart-modal .carrito-contenido {
+  width: 100%;
+}
+
+.cart-modal-close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  padding: 0;
+}
+
+.carrito-acciones button:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 600px) {
+  .carrito-contenido {
+    padding: 18px 14px;
+  }
+
+  .carrito-item {
+    grid-template-columns: 1fr;
+    text-align: center;
+    justify-items: center;
+    min-height: 110px;
+  }
+
+  .carrito-item-info {
+    align-items: center;
+  }
+
+  .carrito-item button {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .carrito-acciones {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carrito-acciones button {
+    width: 100%;
+    max-width: 280px;
+  }
+}

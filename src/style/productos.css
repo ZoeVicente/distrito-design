@@ -1,0 +1,92 @@
+h1{
+  margin: 30px 0 10px;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1200px;
+  margin: 20px auto 0;
+  padding: 10px;
+}
+
+.producto {
+  background-color: var(--tierra-beige);
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 10px 8px rgba(107, 78, 61, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  padding: 30px;
+  width: 100%;
+  max-width: 360px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.producto:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(107, 78, 61, 0.2);
+}
+
+.producto img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.producto h3 {
+  margin: 25px 0 0;
+  font-size: 18px;
+  line-height: 1.25;
+  min-height: 2.8em;
+}
+
+.producto p {
+  font-weight: bold;
+  margin: 0 0 25px;
+}
+
+.producto button {
+  margin-top: auto;
+}
+
+.producto-error {
+  margin: 10px 0 0;
+  color: #8a1f1f;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.producto button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (max-width: 900px) {
+  .productos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+@media (max-width: 600px) {
+  .productos {
+    grid-template-columns: 1fr;
+    gap: 26px;
+    justify-items: center;
+    padding: 0 14px;
+  }
+
+  .producto {
+    padding: 24px;
+  }
+
+  .producto img {
+    height: 220px;
+  }
+}
